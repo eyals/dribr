@@ -22,17 +22,32 @@
 	</style>
 <script>
 <?php
-	$pages = 2;
-	$per_page = 50;//up to 50
+	$pages = 1;
+	$per_page = 2;//up to 50
 	$shots = array();
 	for ($i=1;$i<=$pages;$i++){
 		$results = json_decode(file_get_contents("http://api.dribbble.com/shots/popular?per_page=".$per_page."&page=".$i));
 		foreach ($results->shots as $shot){
-			array_push($shots,'"'.$shot->image_url.'"');
+
+			$newShot;
+			$newShot['image'] = $shot->image_url;
+			$newShot['title'] = $shot->title;
+			$newShot['likes'] = $shot->likes_count;
+			$newShot['comments'] = $shot->comments_count;
+			$newShot['views'] = $shot->views_count;
+			$newShot['url'] = $shot->short_url;
+			
+			$newShot['player']['avatar'] = $shot->player->avatar_url;
+			$newShot['player']['name'] = $shot->player->name;
+			$newShot['player']['location'] = $shot->player->location;
+			array_push($shots,$newShot);
+			
 		}
 	}
-	echo "var shots = new Array(" . implode(",",$shots) . ");";
+	echo "var shots = " . json_encode($shots) . ";";
 ?>
+
+//console.log(shots);
 
 var totalShots = shots.length;
 setInterval(changeImage,6000);
@@ -50,7 +65,7 @@ function changeImage(){
 }
 
 function setNextShot(){
-	var nextShotUrl = shots[Math.floor(Math.random() * totalShots)];
+	var nextShotUrl = shots[Math.floor(Math.random() * totalShots)].image;
 	$('#standbyShot').css("background-image", 'url('+nextShotUrl+')');
 }
 setNextShot();
