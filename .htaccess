@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^popular$ show.php?popular=1
+RewriteRule ^player/([a-zA-Z0-9_-]+)$ show.php?player=$1
+RewriteRule ^stream/([a-zA-Z0-9_-]+)$ show.php?stream=$1
