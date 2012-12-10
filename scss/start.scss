@@ -1,0 +1,142 @@
+@import "_base";
+
+$input-width:180px;
+
+
+@mixin border-radius($radius:5px){
+		-moz-border-radius:$radius;
+		-webkit-border-radius:$radius;
+		border-radius:$radius;
+}
+
+#wrapper{
+	max-width:1100px;
+	margin:auto;
+}
+header{
+	text-align:center;
+	
+	img{
+		margin-top:-30px;
+	}
+	h2{
+		font-size:30px;
+		margin:auto;
+		margin-bottom:20px;
+		color:$darkpink;
+		max-width:400px;
+		text-shadow:0px 1px 0px rgba(255,255,255,0.3);
+		font-weight:bold;
+	}
+	#tip{
+		text-align:center;
+		margin:auto;
+		font-size:14px;
+		font-weight:bold;
+		color:white;
+		text-shadow:0px 1px 0px black;
+		margin-bottom:20px;
+	}
+}
+#options{
+	background-color:rgb(83,19,64);
+	@include border-radius();
+	-moz-box-shadow:0px 1px 0px rgba(255,255,255,0.3) ,inset 0px 3px 3px rgba(0,0,0,0.65);
+	-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.3) ,inset 0px 3px 3px rgba(0,0,0,0.65);
+	box-shadow:0px 1px 0px rgba(255,255,255,0.3) ,inset 0px 3px 3px rgba(0,0,0,0.65);
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+}
+.startOption{
+	width:33%;
+	display:inline-block;
+	text-align:center;
+	text-shadow:0px 2px 0px black;
+	line-height:150%;
+	margin:0 -2px;
+
+	img{
+		display:block;
+		margin:20px auto;
+	}
+	.frm{
+		height:80px;
+		width:$input-width;
+		margin:auto;
+	}
+	input{
+		background-color:rgb(39,7,30);
+		width:$input-width;
+		height:40px;
+		@include border-radius();
+		-moz-box-shadow:0px 1px 0px rgba(255,255,255,0.2) ,inset 0px 3px 3px rgb(0,0,0);
+		-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.2) ,inset 0px 3px 3px rgb(0,0,0);
+		box-shadow:0px 1px 0px rgba(255,255,255,0.2) ,inset 0px 3px 3px rgb(0,0,0);
+		border:1px solid black;
+		color:white;
+		text-align:center;
+		font-size:20px;
+	}
+	input:hover, input:focus{
+		border-color: $pink;
+	}
+	::-webkit-input-placeholder {
+		color:$pink;
+		opacity:0.6;
+	}
+
+	:-moz-placeholder {  
+		color:$pink;
+
+	}
+	input,button{
+		display:block;
+		margin:auto;
+	}
+
+	.btn{
+		background-image:-moz-linear-gradient(94% 0% -90deg,rgb(71,71,71) 0%,rgb(0,0,0) 100%); 
+		background-image:-webkit-gradient(linear,94% 0%,94% 100%,color-stop(0, rgb(71,71,71)),color-stop(1, rgb(0,0,0)));
+		background-image:-webkit-linear-gradient(-90deg,rgb(71,71,71) 0%,rgb(0,0,0) 100%);
+		background-image:linear-gradient(-90deg,rgb(71,71,71) 0%,rgb(0,0,0) 100%);
+		width:$input-width;
+		height:50px;
+		border:1px solid black;
+		@include border-radius();
+		-moz-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.3);
+		-webkit-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.3);
+		box-shadow:inset 0px 1px 0px rgba(255,255,255,0.3);
+		font-size:18px;
+		font-weight:bold;
+		text-transform:uppercase;
+		color:$pink;
+		text-shadow:0px -2px 0px black;
+		margin-bottom:15px;
+	}
+	.btn:hover{
+		border-color:$pink;
+		-moz-box-shadow:inset 0px 0px 10px rgb(200,16,152);
+		-webkit-box-shadow:inset 0px 0px 10px rgb(200,16,152);
+		box-shadow:inset 0px 0px 10px rgb(200,16,152);
+		color:white;
+		cursor:pointer;
+	}
+}
+
+footer{
+	clear:both;
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.startOption{
+		width:100%;
+		border-bottom:1px solid $pink;
+		padding-bottom:10px;
+	}
+
+}
+

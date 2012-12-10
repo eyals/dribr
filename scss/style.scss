@@ -1,0 +1,95 @@
+@import "_base";
+
+img {
+	border:none;
+}
+
+#shot, #standbyShot{
+	background:url('../img/loading.png') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width:100%; 
+	height:100%;
+	position:fixed; 
+	left:0; 
+	top:0;
+}
+#shot{
+	z-index:10;
+}
+
+.label{
+	position:absolute; 
+	z-index:20; 
+	left:0; 
+	background-color:rgba(0,0,0,0.7); 
+	color:white;
+	cursor:pointer; 
+	display:none;
+} 
+#meta{
+	@extend .label;
+	bottom:0; 
+	padding:5px 8px;
+
+	h1{
+		margin:0; 
+		padding:0;
+		font-size:30px;
+		font-weight:normal;
+	}
+	#counts {
+		opacity:0.6; 
+		font-size:14px;
+		font-weight:bold;
+
+		.count{
+			background-repeat:no-repeat; 
+			margin-right:10px; 
+			padding-left:18px;
+			background-position:left 2px;
+		}
+
+		#count_views{
+			@extend .count;
+			background-image:url('icon_views.png');
+		}
+		#count_likes{
+			@extend .count;
+			background-image:url('icon_likes.png');
+		}
+		#count_comments{
+			@extend .count;
+			background-image:url('icon_comments.png');
+		}
+	}
+}
+
+
+#user{
+	@extend .label;
+	min-height:50px; 
+	top:0; 
+	padding:5px;
+
+	#avatar{
+		position:absolute; 
+		left:5px; 
+		top:5px; 
+		width:50px; 
+		height:50px; 
+		border:1px solid #666;
+	}
+	#name{
+		font-size:16px; 
+		font-weight:bold;
+		margin-left:55px; 
+	}
+	#location{
+		@extend #name;
+		font-size:14px; 
+		opacity:0.8
+	}
+}

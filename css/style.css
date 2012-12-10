@@ -1,0 +1,175 @@
+/* line 17, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../scss/_base.scss */
+body, input, button, * {
+  font-family: "Exo", "sans serif";
+}
+
+/* line 14, ../scss/_base.scss */
+body {
+  background: #c61e97 url("../img/bg.png");
+  padding: 20px;
+}
+
+/* line 3, ../scss/style.scss */
+img {
+  border: none;
+}
+
+/* line 7, ../scss/style.scss */
+#shot, #standbyShot {
+  background: url("../img/loading.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* line 19, ../scss/style.scss */
+#shot {
+  z-index: 10;
+}
+
+/* line 23, ../scss/style.scss */
+.label, #meta, #user {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* line 32, ../scss/style.scss */
+#meta {
+  bottom: 0;
+  padding: 5px 8px;
+}
+/* line 37, ../scss/style.scss */
+#meta h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+/* line 43, ../scss/style.scss */
+#meta #counts {
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 48, ../scss/style.scss */
+#meta #counts .count, #meta #counts #count_views, #meta #counts #count_likes, #meta #counts #count_comments {
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  padding-left: 18px;
+  background-position: left 2px;
+}
+/* line 55, ../scss/style.scss */
+#meta #counts #count_views {
+  background-image: url("icon_views.png");
+}
+/* line 59, ../scss/style.scss */
+#meta #counts #count_likes {
+  background-image: url("icon_likes.png");
+}
+/* line 63, ../scss/style.scss */
+#meta #counts #count_comments {
+  background-image: url("icon_comments.png");
+}
+
+/* line 71, ../scss/style.scss */
+#user {
+  min-height: 50px;
+  top: 0;
+  padding: 5px;
+}
+/* line 77, ../scss/style.scss */
+#user #avatar {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #666;
+}
+/* line 85, ../scss/style.scss */
+#user #name, #user #location {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 55px;
+}
+/* line 90, ../scss/style.scss */
+#user #location {
+  font-size: 14px;
+  opacity: 0.8;
+}

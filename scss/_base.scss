@@ -1,0 +1,17 @@
+$main-font:'Exo';
+$pink:#C61E97;
+$darkpink:#57133F;
+$radius:5px;
+
+@import "compass";
+@import "compass/reset";
+
+
+body,input,button,*{
+	font-family:$main-font,'sans serif';
+}
+
+body{
+	background:$pink url('../img/bg.png');
+	padding:20px;
+}
