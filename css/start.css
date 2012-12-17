@@ -70,7 +70,8 @@ body, input, button, * {
 
 /* line 14, ../scss/_base.scss */
 body {
-  background: #c61e97 url("../img/bg.png");
+  background: #ff5e9d;
+  /* url('/img/bg.png');*/
   padding: 20px;
 }
 
@@ -111,7 +112,7 @@ header #tip {
 
 /* line 41, ../scss/start.scss */
 #options {
-  background-color: #531340;
+  background-color: #57133f;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -161,23 +162,23 @@ header #tip {
 }
 /* line 81, ../scss/start.scss */
 .startOption input:hover, .startOption input:focus {
-  border-color: #c61e97;
+  border-color: #ff5e9d;
 }
-/* line 84, ../scss/start.scss */
+/* line 85, ../scss/start.scss */
 .startOption ::-webkit-input-placeholder {
-  color: #c61e97;
+  color: #ff5e9d;
   opacity: 0.6;
 }
-/* line 89, ../scss/start.scss */
+/* line 90, ../scss/start.scss */
 .startOption :-moz-placeholder {
-  color: #c61e97;
+  color: #ff5e9d;
 }
-/* line 93, ../scss/start.scss */
+/* line 94, ../scss/start.scss */
 .startOption input, .startOption button {
   display: block;
   margin: auto;
 }
-/* line 98, ../scss/start.scss */
+/* line 99, ../scss/start.scss */
 .startOption .btn {
   background-image: -moz-linear-gradient(94% 0% -90deg, #474747 0%, black 100%);
   background-image: -webkit-gradient(linear, 94% 0%, 94% 100%, color-stop(0, #474747), color-stop(1, black));
@@ -195,13 +196,13 @@ header #tip {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #c61e97;
+  color: #ff5e9d;
   text-shadow: 0px -2px 0px black;
   margin-bottom: 15px;
 }
-/* line 117, ../scss/start.scss */
+/* line 118, ../scss/start.scss */
 .startOption .btn:hover {
-  border-color: #c61e97;
+  border-color: #ff5e9d;
   -moz-box-shadow: inset 0px 0px 10px #c81098;
   -webkit-box-shadow: inset 0px 0px 10px #c81098;
   box-shadow: inset 0px 0px 10px #c81098;
@@ -209,17 +210,24 @@ header #tip {
   cursor: pointer;
 }
 
-/* line 127, ../scss/start.scss */
+/* line 131, ../scss/start.scss */
+::-webkit-validation-bubble-message {
+  font-family: "Exo", "sans serif";
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* line 137, ../scss/start.scss */
 footer {
   clear: both;
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 135, ../scss/start.scss */
+  /* line 145, ../scss/start.scss */
   .startOption {
     width: 100%;
-    border-bottom: 1px solid #c61e97;
+    border-bottom: 1px solid #ff5e9d;
     padding-bottom: 10px;
   }
 }

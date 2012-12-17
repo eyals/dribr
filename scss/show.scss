@@ -1,15 +1,17 @@
 @import "_base";
 
-img {
-	border:none;
+$shot_size:contain; //contain / cover
+
+body{
+	background:black;
 }
 
 #shot, #standbyShot{
-	background:url('../img/loading.png') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background:url('/img/loading.png') no-repeat center center fixed; 
+	-webkit-background-size: $shot_size;
+	-moz-background-size: $shot_size;
+	-o-background-size: $shot_size;
+	background-size: $shot_size;
 	width:100%; 
 	height:100%;
 	position:fixed; 
@@ -28,14 +30,16 @@ img {
 	color:white;
 	cursor:pointer; 
 	display:none;
+	padding:5px 10px 5px 5px;
 } 
 #meta{
 	@extend .label;
 	bottom:0; 
-	padding:5px 8px;
+	padding-left:10px;
 
 	h1{
 		margin:0; 
+		margin-bottom:7px;
 		padding:0;
 		font-size:30px;
 		font-weight:normal;
@@ -54,15 +58,15 @@ img {
 
 		#count_views{
 			@extend .count;
-			background-image:url('icon_views.png');
+			background-image:url('/img/icon_views.png');
 		}
 		#count_likes{
 			@extend .count;
-			background-image:url('icon_likes.png');
+			background-image:url('/img/icon_likes.png');
 		}
 		#count_comments{
 			@extend .count;
-			background-image:url('icon_comments.png');
+			background-image:url('/img/icon_comments.png');
 		}
 	}
 }
@@ -72,7 +76,7 @@ img {
 	@extend .label;
 	min-height:50px; 
 	top:0; 
-	padding:5px;
+	
 
 	#avatar{
 		position:absolute; 

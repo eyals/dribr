@@ -4,10 +4,9 @@
 	<title>DRIBR - Inspirational dribbble slideshow for designers</title>
 	<meta name="description" value="Get today's dribbble popular shots, or those of the dribbble players you follow, presented to you in full screen slideshow."/>
 	<!--link href="css/bootstrap.min.css" rel="stylesheet" media="screen"-->
-	<link rel="stylesheet" tyle="text/css" href="css/start.css"/>
+	<link rel="stylesheet" tyle="text/css" href="/css/start.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Exo:400,700' rel='stylesheet' type='text/css'>
-	<!--script type="text/javascript" src="js/bootstrap.min.js"></script-->
-	<!--script type="text/javascript" src="js/start.js"></script-->
+	
 </head>
 <body>
 
@@ -20,26 +19,26 @@
 		</div>
 		</header>
 		<div id="options">
-			<form class="startOption" name="f_popular">
+			<form class="startOption" id="f_popular">
 				<img src="img/option_icon_popular.png"/>
 				<div class="frm">
 					Today's popular shots
 				</div>
 				<button type="submit" class="btn">Play</button>
 			</form>
-			<form class="startOption" name="f_player">
+			<form class="startOption" id="f_player">
 				<img src="img/option_icon_player.png"/>
 				<div class="frm">
 					Shots by
-					<input type="text" placeholder="Player Username"/>
+					<input type="text" placeholder="Player Username" required/>
 				</div>
 				<button type="submit" class="btn">Play</button>
 			</form>
-			<form class="startOption" name="f_stream">
+			<form class="startOption" id="f_stream">
 				<img src="img/option_icon_stream.png"/>
 				<div class="frm">
 					Followed by
-					<input type="text" placeholder="Player Username"/>
+					<input type="text" placeholder="Player Username" required/>
 				</div>
 				<button type="submit" class="btn">Play</button>
 			</form>
@@ -51,6 +50,12 @@
 
 
 	<?php require_once('analytics.php'); ?>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<!--script type="text/javascript" src="js/bootstrap.min.js"></script-->
+<script type="text/javascript" src="/js/start.js"></script>
+
 
 </body>
 

@@ -39,7 +39,7 @@ header{
 	}
 }
 #options{
-	background-color:rgb(83,19,64);
+	background-color:$darkpink;
 	@include border-radius();
 	-moz-box-shadow:0px 1px 0px rgba(255,255,255,0.3) ,inset 0px 3px 3px rgba(0,0,0,0.65);
 	-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.3) ,inset 0px 3px 3px rgba(0,0,0,0.65);
@@ -81,6 +81,7 @@ header{
 	input:hover, input:focus{
 		border-color: $pink;
 	}
+
 	::-webkit-input-placeholder {
 		color:$pink;
 		opacity:0.6;
@@ -122,6 +123,15 @@ header{
 		color:white;
 		cursor:pointer;
 	}
+}
+
+::-webkit-validation-bubble{}
+::-webkit-validation-bubble-top-outer-arrow{}
+::-webkit-validation-bubble-top-inner-arrow{}
+::-webkit-validation-bubble-message{
+	font-family: $main-font, 'sans serif';
+	text-transform: uppercase;
+	border-radius:2px;
 }
 
 footer{

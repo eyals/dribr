@@ -70,22 +70,23 @@ body, input, button, * {
 
 /* line 14, ../scss/_base.scss */
 body {
-  background: #c61e97 url("../img/bg.png");
+  background: #ff5e9d;
+  /* url('/img/bg.png');*/
   padding: 20px;
 }
 
-/* line 3, ../scss/style.scss */
-img {
-  border: none;
+/* line 5, ../scss/show.scss */
+body {
+  background: black;
 }
 
-/* line 7, ../scss/style.scss */
+/* line 9, ../scss/show.scss */
 #shot, #standbyShot {
-  background: url("../img/loading.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url("/img/loading.png") no-repeat center center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -93,12 +94,12 @@ img {
   top: 0;
 }
 
-/* line 19, ../scss/style.scss */
+/* line 21, ../scss/show.scss */
 #shot {
   z-index: 10;
 }
 
-/* line 23, ../scss/style.scss */
+/* line 25, ../scss/show.scss */
 .label, #meta, #user {
   position: absolute;
   z-index: 20;
@@ -107,53 +108,54 @@ img {
   color: white;
   cursor: pointer;
   display: none;
+  padding: 5px 10px 5px 5px;
 }
 
-/* line 32, ../scss/style.scss */
+/* line 35, ../scss/show.scss */
 #meta {
   bottom: 0;
-  padding: 5px 8px;
+  padding-left: 10px;
 }
-/* line 37, ../scss/style.scss */
+/* line 40, ../scss/show.scss */
 #meta h1 {
   margin: 0;
+  margin-bottom: 7px;
   padding: 0;
   font-size: 30px;
   font-weight: normal;
 }
-/* line 43, ../scss/style.scss */
+/* line 47, ../scss/show.scss */
 #meta #counts {
   opacity: 0.6;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 48, ../scss/style.scss */
+/* line 52, ../scss/show.scss */
 #meta #counts .count, #meta #counts #count_views, #meta #counts #count_likes, #meta #counts #count_comments {
   background-repeat: no-repeat;
   margin-right: 10px;
   padding-left: 18px;
   background-position: left 2px;
 }
-/* line 55, ../scss/style.scss */
+/* line 59, ../scss/show.scss */
 #meta #counts #count_views {
-  background-image: url("icon_views.png");
+  background-image: url("/img/icon_views.png");
 }
-/* line 59, ../scss/style.scss */
+/* line 63, ../scss/show.scss */
 #meta #counts #count_likes {
-  background-image: url("icon_likes.png");
+  background-image: url("/img/icon_likes.png");
 }
-/* line 63, ../scss/style.scss */
+/* line 67, ../scss/show.scss */
 #meta #counts #count_comments {
-  background-image: url("icon_comments.png");
+  background-image: url("/img/icon_comments.png");
 }
 
-/* line 71, ../scss/style.scss */
+/* line 75, ../scss/show.scss */
 #user {
   min-height: 50px;
   top: 0;
-  padding: 5px;
 }
-/* line 77, ../scss/style.scss */
+/* line 81, ../scss/show.scss */
 #user #avatar {
   position: absolute;
   left: 5px;
@@ -162,13 +164,13 @@ img {
   height: 50px;
   border: 1px solid #666;
 }
-/* line 85, ../scss/style.scss */
+/* line 89, ../scss/show.scss */
 #user #name, #user #location {
   font-size: 16px;
   font-weight: bold;
   margin-left: 55px;
 }
-/* line 90, ../scss/style.scss */
+/* line 94, ../scss/show.scss */
 #user #location {
   font-size: 14px;
   opacity: 0.8;

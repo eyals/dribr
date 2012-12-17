@@ -1,6 +1,6 @@
 $main-font:'Exo';
-$pink:#C61E97;
-$darkpink:#57133F;
+$pink:#FF5E9D;
+$darkpink:#57133f;
 $radius:5px;
 
 @import "compass";
@@ -12,6 +12,6 @@ body,input,button,*{
 }
 
 body{
-	background:$pink url('../img/bg.png');
+	background:$pink;/* url('/img/bg.png');*/
 	padding:20px;
 }
