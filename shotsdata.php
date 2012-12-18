@@ -1,8 +1,15 @@
 <?php
+	$dev = false;
 
-	$pages = 10;
-	$per_page = 30;//up to 50
-	$cache_minutes = 5;
+	if ($dev){
+		$pages = 1;
+		$per_page = 5;//up to 50
+		$cache_minutes = 0;
+	}else{
+		$pages = 10;
+		$per_page = 30;//up to 50
+		$cache_minutes = 5;
+	}
 
 
 	if (isset($_GET['player'])){
@@ -51,6 +58,7 @@
 			
 		}
 	}
+	shuffle($shots);
 	echo json_encode($shots);
 
 

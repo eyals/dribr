@@ -28,15 +28,6 @@ header{
 		text-shadow:0px 1px 0px rgba(255,255,255,0.3);
 		font-weight:bold;
 	}
-	#tip{
-		text-align:center;
-		margin:auto;
-		font-size:14px;
-		font-weight:bold;
-		color:white;
-		text-shadow:0px 1px 0px black;
-		margin-bottom:20px;
-	}
 }
 #options{
 	background-color:$darkpink;
@@ -47,6 +38,7 @@ header{
 	color:white;
 	font-size:20px;
 	font-weight:bold;
+	margin-bottom:20px;
 }
 .startOption{
 	width:33%;
@@ -135,8 +127,22 @@ header{
 }
 
 footer{
+	font-size:16px;
 	clear:both;
+	text-align: center;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
 }
+#tip{
+	font-size:22px;
+	color:white;
+	margin-bottom:30px;
+	text-align:center;
+}
+#credit{
+	
+	margin-bottom:30px;
+}
+
 
 
 /* Landscape phone to portrait tablet */
@@ -146,6 +152,9 @@ footer{
 		width:100%;
 		border-bottom:1px solid $pink;
 		padding-bottom:10px;
+	}
+	#acredit{
+		float:left;
 	}
 
 }

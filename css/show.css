@@ -70,19 +70,29 @@ body, input, button, * {
 
 /* line 14, ../scss/_base.scss */
 body {
-  background: #ff5e9d;
-  /* url('/img/bg.png');*/
+  background: #ff5e9d url("/img/bg.png");
   padding: 20px;
+}
+
+/* line 18, ../scss/_base.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 22, ../scss/_base.scss */
+a:hover {
+  text-decoration: underline;
 }
 
 /* line 5, ../scss/show.scss */
 body {
-  background: black;
+  background: black url("/img/bg-black.png");
 }
 
 /* line 9, ../scss/show.scss */
 #shot, #standbyShot {
-  background: url("/img/loading.png") no-repeat center center fixed;
+  background: url("/img/loading.png") no-repeat right center fixed;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -174,4 +184,22 @@ body {
 #user #location {
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* line 101, ../scss/show.scss */
+#playback_feedback {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  background-image: url("/img/playback.png");
+  background-size: 100%;
+  background-position: 50% 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: none;
 }

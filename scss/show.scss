@@ -3,11 +3,11 @@
 $shot_size:contain; //contain / cover
 
 body{
-	background:black;
+	background:black url('/img/bg-black.png');
 }
 
 #shot, #standbyShot{
-	background:url('/img/loading.png') no-repeat center center fixed; 
+	background:url('/img/loading.png') no-repeat right center fixed; 
 	-webkit-background-size: $shot_size;
 	-moz-background-size: $shot_size;
 	-o-background-size: $shot_size;
@@ -97,3 +97,21 @@ body{
 		opacity:0.8
 	}
 }
+
+#playback_feedback{
+	position:absolute; 
+	z-index:30; 
+	top:50%;
+	left:50%;
+	width:100px;
+	height:100px;
+	margin-left:-50px;
+	margin-top:-50px;
+	background-image:url('/img/playback.png');
+	background-size:100%;
+	background-position:50% 0;
+	border:1px solid rgba(255,255,255,0.3);
+	border-radius:20px;
+	display: none;
+}
+
