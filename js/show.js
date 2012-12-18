@@ -1,24 +1,23 @@
 
-var delay = 6;//seconds
+var delay = 4;//seconds
 
 var shots;
 var totalShots;
+var playInterval;
 $.getJSON('/shotsdata.php'+dataApi,function(data){
 	shots = data;
 	totalShots = shots.length;
 	console.log(shots);
-	changeImage();
-	setInterval(changeImage,delay*1000);
+	resume();
 });
 
 
 
 function changeImage(){
 	//setTimer(function(){},500);
-	
 	$('#shot').fadeOut(1000,function(){
 			$(this).css("background-image", $('#standbyShot').css("background-image"));
-			console.log($('#standbyShot').css("background-image"));
+			if (nextImageIndex>-1) ;//console.log(nextImageIndex + ": " + shots[nextImageIndex].title);
 			$(this).show();
 			setImageMeta();
 			setNextShot();
@@ -27,17 +26,18 @@ function changeImage(){
 	
 }
 
-var nextImageIndex;
+var nextImageIndex = -1;
 function setNextShot(){
-	nextImageIndex = Math.floor(Math.random() * totalShots)
+	nextImageIndex ++;
+	if (nextImageIndex==totalShots || nextImageIndex<0) nextImageIndex=0;
 	var nextShotUrl = shots[nextImageIndex].image;
 	$('#standbyShot').css("background-image", 'url('+nextShotUrl+')');
 }
 
-
+var nextShot;
 function setImageMeta(){
-	if(nextImageIndex==undefined) return;
-	var nextShot = shots[nextImageIndex];
+	if(nextImageIndex<0) return;
+	nextShot = shots[nextImageIndex];
 	$('#meta h1').text(nextShot.title);
 	$('#count_views').text(nextShot.views);
 	$('#count_likes').text(nextShot.likes);
@@ -52,6 +52,87 @@ function setImageMeta(){
 	$('#user').fadeIn().click(function(){
 		window.open(nextShot.player.url);
 	});
+}
+
+function pause(){
+	clearInterval(playInterval);
+	playInterval=null;
+}
+function resume(){
+	changeImage();
+	if (playInterval) clearInterval(playInterval);//in case it runs for some weird reason
+	playInterval = setInterval(changeImage,delay*1000);
+}
+
+function togglePlay(){
+	if (playInterval){
+		pause();
+		showFeedback('Pause');
+	}else{
+		resume();
+		showFeedback('Resume');
+	}
+}
+
+function goToPrevious(){
+	if (nextImageIndex<=1){
+		jumpToShot(totalShots-1);
+	}else{
+		jumpToShot(nextImageIndex-2);
+	}
+	showFeedback('Previous');
+}
+function goToNext(){
+	if (nextImageIndex<totalShots){
+		jumpToShot(nextImageIndex);
+	}else{
+		jumpToShot(0);
+	}
+	showFeedback('Next');
+}
+function jumpToShot(imageIndex){
+	pause();
+	console.log(imageIndex)
+	$('#shot').css("background-image", 'url('+shots[imageIndex].image+')');
+	$('#standbyShot').css("background-image", 'url('+shots[imageIndex].image+')');
+	setImageMeta();
+	nextImageIndex = imageIndex;
+	//changeImage();
+	resume();
+}
+
+$("#shot").click(function(e){
+	clickPosition = (e.pageX/$(document).width());
+	if (clickPosition<0.3){
+		goToPrevious();
+	}else if (clickPosition>0.7){
+		goToNext();
+	}else{
+		togglePlay();
+	}
+})
+
+function showFeedback(type){
+
+	switch (type){
+		case "Resume":
+			$('#feedback').html('&#x25BA');
+			break;
+		case "Pause":
+			$('#feedback').html('||');
+			break;
+		case "Next":
+			$('#feedback').html('&#x25BA&#x25BA');
+			break;
+		case "Previous":
+			$('#feedback').html('&#x25C4&#x25C4');
+			break;
+		default:
+	}
+	$('#feedback_holder').show().fadeOut('slow');
+
+
+	//console.log('Feedback: '+type)
 }
 /*
 function setShotsSize(){

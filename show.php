@@ -34,6 +34,10 @@
 		<div id="name"></div>
 		<div id="location"></div>
 	</div>
+	<div id="feedback_holder">
+		<div id="feedback">
+		</div>
+	</div>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>

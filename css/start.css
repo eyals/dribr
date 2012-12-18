@@ -70,9 +70,19 @@ body, input, button, * {
 
 /* line 14, ../scss/_base.scss */
 body {
-  background: #ff5e9d;
-  /* url('/img/bg.png');*/
+  background: #ff5e9d url("/img/bg.png");
   padding: 20px;
+}
+
+/* line 18, ../scss/_base.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 22, ../scss/_base.scss */
+a:hover {
+  text-decoration: underline;
 }
 
 /* line 12, ../scss/start.scss */
@@ -99,18 +109,8 @@ header h2 {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
   font-weight: bold;
 }
-/* line 31, ../scss/start.scss */
-header #tip {
-  text-align: center;
-  margin: auto;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0px 1px 0px black;
-  margin-bottom: 20px;
-}
 
-/* line 41, ../scss/start.scss */
+/* line 32, ../scss/start.scss */
 #options {
   background-color: #57133f;
   -moz-border-radius: 5px;
@@ -122,9 +122,10 @@ header #tip {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
-/* line 51, ../scss/start.scss */
+/* line 43, ../scss/start.scss */
 .startOption {
   width: 33%;
   display: inline-block;
@@ -133,18 +134,18 @@ header #tip {
   line-height: 150%;
   margin: 0 -2px;
 }
-/* line 59, ../scss/start.scss */
+/* line 51, ../scss/start.scss */
 .startOption img {
   display: block;
   margin: 20px auto;
 }
-/* line 63, ../scss/start.scss */
+/* line 55, ../scss/start.scss */
 .startOption .frm {
   height: 80px;
   width: 180px;
   margin: auto;
 }
-/* line 68, ../scss/start.scss */
+/* line 60, ../scss/start.scss */
 .startOption input {
   background-color: #27071e;
   width: 180px;
@@ -160,25 +161,25 @@ header #tip {
   text-align: center;
   font-size: 20px;
 }
-/* line 81, ../scss/start.scss */
+/* line 73, ../scss/start.scss */
 .startOption input:hover, .startOption input:focus {
   border-color: #ff5e9d;
 }
-/* line 85, ../scss/start.scss */
+/* line 77, ../scss/start.scss */
 .startOption ::-webkit-input-placeholder {
   color: #ff5e9d;
   opacity: 0.6;
 }
-/* line 90, ../scss/start.scss */
+/* line 82, ../scss/start.scss */
 .startOption :-moz-placeholder {
   color: #ff5e9d;
 }
-/* line 94, ../scss/start.scss */
+/* line 86, ../scss/start.scss */
 .startOption input, .startOption button {
   display: block;
   margin: auto;
 }
-/* line 99, ../scss/start.scss */
+/* line 91, ../scss/start.scss */
 .startOption .btn {
   background-image: -moz-linear-gradient(94% 0% -90deg, #474747 0%, black 100%);
   background-image: -webkit-gradient(linear, 94% 0%, 94% 100%, color-stop(0, #474747), color-stop(1, black));
@@ -200,7 +201,7 @@ header #tip {
   text-shadow: 0px -2px 0px black;
   margin-bottom: 15px;
 }
-/* line 118, ../scss/start.scss */
+/* line 110, ../scss/start.scss */
 .startOption .btn:hover {
   border-color: #ff5e9d;
   -moz-box-shadow: inset 0px 0px 10px #c81098;
@@ -210,24 +211,45 @@ header #tip {
   cursor: pointer;
 }
 
-/* line 131, ../scss/start.scss */
+/* line 123, ../scss/start.scss */
 ::-webkit-validation-bubble-message {
   font-family: "Exo", "sans serif";
   text-transform: uppercase;
   border-radius: 2px;
 }
 
-/* line 137, ../scss/start.scss */
+/* line 129, ../scss/start.scss */
 footer {
+  font-size: 16px;
   clear: both;
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* line 135, ../scss/start.scss */
+#tip {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 141, ../scss/start.scss */
+#credit {
+  margin-bottom: 30px;
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 145, ../scss/start.scss */
+  /* line 151, ../scss/start.scss */
   .startOption {
     width: 100%;
     border-bottom: 1px solid #ff5e9d;
     padding-bottom: 10px;
+  }
+
+  /* line 156, ../scss/start.scss */
+  #acredit {
+    float: left;
   }
 }

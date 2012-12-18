@@ -70,19 +70,29 @@ body, input, button, * {
 
 /* line 14, ../scss/_base.scss */
 body {
-  background: #ff5e9d;
-  /* url('/img/bg.png');*/
+  background: #ff5e9d url("/img/bg.png");
   padding: 20px;
+}
+
+/* line 18, ../scss/_base.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 22, ../scss/_base.scss */
+a:hover {
+  text-decoration: underline;
 }
 
 /* line 5, ../scss/show.scss */
 body {
-  background: black;
+  background: black url("/img/bg-black.png");
 }
 
 /* line 9, ../scss/show.scss */
 #shot, #standbyShot {
-  background: url("/img/loading.png") no-repeat center center fixed;
+  background: url("/img/loading.png") no-repeat right center fixed;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -174,4 +184,31 @@ body {
 #user #location {
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* line 100, ../scss/show.scss */
+#feedback_holder {
+  position: absolute;
+  z-index: 30;
+  top: 60px;
+  left: 10%;
+  width: 80%;
+  min-height: 50px;
+  text-align: center;
+  display: none;
+}
+
+/* line 110, ../scss/show.scss */
+#feedback {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: lowercase;
+  letter-spacing: -4px;
+  padding: 15px 35px 15px 35px;
+  border-radius: 20px;
 }

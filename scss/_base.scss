@@ -12,6 +12,13 @@ body,input,button,*{
 }
 
 body{
-	background:$pink;/* url('/img/bg.png');*/
+	background:$pink url('/img/bg.png');
 	padding:20px;
+}
+a{
+	color:white;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
 }
