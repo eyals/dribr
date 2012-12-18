@@ -1,5 +1,5 @@
 
-var delay = 4;//seconds
+var delay = 6;//seconds
 
 var shots;
 var totalShots;
@@ -113,23 +113,22 @@ $("#shot").click(function(e){
 })
 
 function showFeedback(type){
-
 	switch (type){
 		case "Resume":
-			$('#feedback').html('&#x25BA');
+			$('#playback_feedback').css("background-position","50% 0");
 			break;
 		case "Pause":
-			$('#feedback').html('||');
+			$('#playback_feedback').css("background-position","50% -100px");
 			break;
 		case "Next":
-			$('#feedback').html('&#x25BA&#x25BA');
+			$('#playback_feedback').css("background-position","50% -300px");
 			break;
 		case "Previous":
-			$('#feedback').html('&#x25C4&#x25C4');
+			$('#playback_feedback').css("background-position","50% -200px");
 			break;
 		default:
 	}
-	$('#feedback_holder').show().fadeOut('slow');
+	$('#playback_feedback').show().delay(500).fadeOut('slow');
 
 
 	//console.log('Feedback: '+type)
